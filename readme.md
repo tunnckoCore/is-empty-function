@@ -10,13 +10,21 @@ npm test
 
 
 ## Related
-- [hybridify](https://github.com/tunnckoCore/hybridify)
-- [parse-function](https://github.com/tunnckoCore/parse-function)
-- [function-regex](https://github.com/regexps/function-regex)
+- [hybridify][hybridify]
+- [parse-function][parse-function]
+- [function-regex][function-regex]
 
 
-## Usage
+## API
 > For more use-cases see the [tests](./test.js)
+
+### [isEmptyFunction](./index.js#L42)
+> Check given function have empty body or not, and returns true or false.
+
+- `[fn]` **{Function|String}**  passed to [parse-function][parse-function]  
+- `return` **{Boolean}**
+
+**Example:**
 
 ```js
 var isEmptyFunction = require('is-empty-function');
@@ -79,3 +87,7 @@ Released under the [`MIT`][license-url] license.
 ***
 
 _Powered and automated by [kdf](https://github.com/tunnckoCore), January 26, 2015_
+
+[hybridify]: https://github.com/tunnckoCore/hybridify
+[parse-function]: https://github.com/tunnckoCore/parse-function
+[function-regex]: https://github.com/regexps/function-regex
