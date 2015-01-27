@@ -42,7 +42,8 @@ var parseFunction = require('parse-function');
 module.exports = function isEmptyFunction(fn) {
   if (fn) {
     var body = parseFunction(fn).body;
-    body = body.replace(/(?:__cov_[^\s]+;)/g,'');
+    body = body.split(/(?:__cov_(?:[a-zA-Z0-9]{1,150})\.(?:.{1})\[\'(?:\d{2,})\'\]\+\+\;)/);
+    body = body.filter(Boolean).join('');
 
     return body.length > 0 ? false : true;
   }
