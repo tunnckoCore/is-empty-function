@@ -1,4 +1,4 @@
-## [![npm][npmjs-img]][npmjs-url] [![mit license][license-img]][license-url] [![build status][travis-img]][travis-url] [![deps status][daviddm-img]][daviddm-url]
+## [![npm][npmjs-img]][npmjs-url] [![mit license][license-img]][license-url] [![build status][travis-img]][travis-url] [![coverage status][coveralls-img]][coveralls-url] [![deps status][daviddm-img]][daviddm-url]
 
 > Checks the given function (or fn.toString()) is with empty body - dont have body.
 
@@ -86,7 +86,7 @@ Released under the [`MIT`][license-url] license.
 
 ***
 
-_Powered and automated by [kdf](https://github.com/tunnckoCore), January 26, 2015_
+_Powered and automated by [kdf](https://github.com/tunnckoCore), January 27, 2015_
 
 [hybridify]: https://github.com/tunnckoCore/hybridify
 [parse-function]: https://github.com/tunnckoCore/parse-function
