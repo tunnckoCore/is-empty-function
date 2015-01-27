@@ -57,7 +57,7 @@
     "url": "https://github.com/tunnckoCore/is-empty-function/blob/master/license.md"
   },
   "dependencies": {
-    "parse-function": "^1.0.0"
+    "parse-function": "~2.0.0"
   },
   "devDependencies": {
     "istanbul-harmony": "^0.3.1",
