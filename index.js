@@ -41,7 +41,10 @@ var parseFunction = require('parse-function');
  */
 module.exports = function isEmptyFunction(fn) {
   if (fn) {
-    return parseFunction(fn).body.length ? false : true;
+    var body = parseFunction(fn).body;
+    body = body.replace(/(?:__cov_[^\s]+;)/g,'');
+
+    return body.length > 0 ? false : true;
   }
   return false;
 };
