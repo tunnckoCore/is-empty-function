@@ -1,6 +1,6 @@
 {
   "name": "is-empty-function",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Checks the given function (or fn.toString()) is with empty body - dont have body.",
   "scripts": {
     "lint": "jshint index.js && jscs index.js --reporter inline",
