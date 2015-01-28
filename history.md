@@ -1,5 +1,13 @@
 
 
+## v1.0.3 / January 28, 2015
+- Release v1.0.3 / npm@v1.0.3
+- add new test for complex coverage code
+- add more reflinks
+- add new example
+- add `cleanup-coverage-code`, which is on top of `coverage-code-regex`
+- move cleanup logic out to `cleanup-coverage-code`
+
 ## v1.0.2 / January 28, 2015
 - Release v1.0.2 / npm@v1.0.2
 - update regex
