@@ -57,6 +57,7 @@
     "url": "https://github.com/tunnckoCore/is-empty-function/blob/master/license.md"
   },
   "dependencies": {
+    "cleanup-coverage-code": "~1.0.2",
     "parse-function": "~2.0.0"
   },
   "devDependencies": {
