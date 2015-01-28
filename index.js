@@ -8,6 +8,7 @@
 'use strict';
 
 var parseFunction = require('parse-function');
+var cleanupCoverageCode = require('cleanup-coverage-code');
 
 /**
  * Check given function have empty body or not, and returns true or false.
@@ -41,13 +42,7 @@ var parseFunction = require('parse-function');
  */
 module.exports = function isEmptyFunction(fn) {
   if (fn) {
-    var r = /(?:__cov_(?:[\w\W\S.,$]{1,99})\.(?:.{1})\[\'(?:\d{1,})\'\]\+\+\;)/;
-
-    var body = parseFunction(fn).body;
-    body = body.split(r).filter(Boolean).filter(function(val) {
-      return r.test(val) ? false : true;
-    }).join('');
-
+    var body = cleanupCoverageCode(parseFunction(fn).body);
     return body.length > 0 ? false : true;
   }
   return false;
