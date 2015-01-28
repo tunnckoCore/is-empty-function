@@ -29,7 +29,7 @@ npm test
 ```js
 var isEmptyFunction = require('is-empty-function');
 
-var fixture = 'function() {}';
+var fixture = 'function() {};';
 isEmptyFunction(fixture);
 //=> true
 
@@ -44,6 +44,10 @@ isEmptyFunction(fixture);
 var fixture = function named() { return true; };
 isEmptyFunction(fixture);
 //=> false
+
+var fixture = "function codeCov() {__cov_Ejgcx$XN18CSfmeWn$f7vQ.f['2']++;};";
+isEmptyFunction(fixture);
+//=> true
 ```
 
 
@@ -86,7 +90,7 @@ Released under the [`MIT`][license-url] license.
 
 ***
 
-_Powered and automated by [kdf](https://github.com/tunnckoCore), January 27, 2015_
+_Powered and automated by [kdf](https://github.com/tunnckoCore), January 28, 2015_
 
 [hybridify]: https://github.com/tunnckoCore/hybridify
 [parse-function]: https://github.com/tunnckoCore/parse-function
