@@ -13,6 +13,8 @@ npm test
 - [hybridify][hybridify]
 - [parse-function][parse-function]
 - [function-regex][function-regex]
+- [coverage-code-regex][coverage-code-regex]
+- [cleanup-coverage-code][cleanup-coverage-code]
 
 
 ## API
@@ -95,3 +97,5 @@ _Powered and automated by [kdf](https://github.com/tunnckoCore), January 28, 201
 [hybridify]: https://github.com/tunnckoCore/hybridify
 [parse-function]: https://github.com/tunnckoCore/parse-function
 [function-regex]: https://github.com/regexps/function-regex
+[coverage-code-regex]: https://github.com/regexps/coverage-code-regex
+[cleanup-coverage-code]: https://github.com/tunnckoCore/cleanup-coverage-code
