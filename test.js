@@ -48,6 +48,15 @@ describe('is-empty-function:', function() {
       assert.strictEqual(actual, expected);
       done();
     });
+    it('when named function contains coverage code', function(done) {
+      var fixture = 'function named() {}';
+      var actual = isEmptyFunction(fixture);
+      var expected = true;
+
+      assert.strictEqual(typeof actual, 'boolean');
+      assert.strictEqual(actual, expected);
+      done();
+    });
   });
   describe('should return `false`', function() {
     it('when no arguments given', function(done) {
@@ -58,7 +67,6 @@ describe('is-empty-function:', function() {
       assert.strictEqual(actual, expected);
       done();
     });
-
     it('when anonymous function with no empty body is given', function(done) {
       var fixture = function() { return true; };
       var actual = isEmptyFunction(fixture);
@@ -68,7 +76,6 @@ describe('is-empty-function:', function() {
       assert.strictEqual(actual, expected);
       done();
     });
-
     it('when anonymous function in string with no empty body is given', function(done) {
       var fixture = 'function() { return true; }';
       var actual = isEmptyFunction(fixture);
@@ -78,7 +85,6 @@ describe('is-empty-function:', function() {
       assert.strictEqual(actual, expected);
       done();
     });
-
     it('when named function with no empty body is given', function(done) {
       var fixture = function named() { return true; };
       var actual = isEmptyFunction(fixture);
@@ -88,7 +94,6 @@ describe('is-empty-function:', function() {
       assert.strictEqual(actual, expected);
       done();
     });
-
     it('when named function in string with no empty body is given', function(done) {
       var fixture = 'function named() { return true; }';
       var actual = isEmptyFunction(fixture);
