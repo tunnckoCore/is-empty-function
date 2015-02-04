@@ -1,5 +1,10 @@
 
 
+## v1.0.4 / February 4, 2015
+- Release v1.0.4 / npm@v1.0.4
+- fix deps, remove `mocha-lcov-reporter`
+- update readme
+
 ## v1.0.3 / January 28, 2015
 - Release v1.0.3 / npm@v1.0.3
 - add new test for complex coverage code
