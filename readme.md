@@ -3,8 +3,8 @@
 > Checks the given function (or fn.toString()) is with empty body - dont have body.
 
 ## Install
-```bash
-npm install is-empty-function
+```
+npm i --save is-empty-function
 npm test
 ```
 
@@ -92,7 +92,7 @@ Released under the [`MIT`][license-url] license.
 
 ***
 
-_Powered and automated by [kdf](https://github.com/tunnckoCore), January 28, 2015_
+_Powered and automated by [kdf](https://github.com/tunnckoCore), February 4, 2015_
 
 [hybridify]: https://github.com/tunnckoCore/hybridify
 [parse-function]: https://github.com/tunnckoCore/parse-function
