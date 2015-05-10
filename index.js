@@ -7,7 +7,7 @@
 
 'use strict';
 
-var parseFunction = require('parse-function');
+var balanced = require('balanced-match');
 var cleanupCoverageCode = require('cleanup-coverage-code');
 
 /**
@@ -42,7 +42,9 @@ var cleanupCoverageCode = require('cleanup-coverage-code');
  */
 module.exports = function isEmptyFunction(fn) {
   if (fn) {
-    var body = cleanupCoverageCode(parseFunction(fn).body);
+    var fnString = fn.toString();
+    var body = balanced('{', '}', fnString).body;
+    body = cleanupCoverageCode(body);
     return body.length > 0 ? false : true;
   }
   return false;

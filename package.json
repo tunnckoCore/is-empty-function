@@ -57,11 +57,11 @@
     "url": "https://github.com/tunnckoCore/is-empty-function/blob/master/license.md"
   },
   "dependencies": {
-    "cleanup-coverage-code": "~1.0.2",
-    "parse-function": "~2.0.0"
+    "balanced-match": "~0.2.0",
+    "cleanup-coverage-code": "~1.0.3"
   },
   "devDependencies": {
-    "istanbul-harmony": "^0.3.1",
+    "istanbul": "^0.3.9",
     "mocha": "~2.1.0"
   }
 }
