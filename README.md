@@ -12,12 +12,48 @@ npm test
 ```
 
 
-## Usage
+## API
 > For more use-cases see the [tests](./test.js)
 
+### [isEmptyFunction](./index.js#L42)
+> Check given function have empty body or not, and returns true or false.
+
+- `[fn]` **{Function|String}**  passed to [parse-function][parse-function]  
+- `return` **{Boolean}**
+
+**Example:**
+
 ```js
-var isEmptyFunction = require('is-empty-function');
+var isEmptyFunction = require('is-empty-function')
+
+var fixture = 'function() {};'
+isEmptyFunction(fixture)
+//=> true
+
+var fixture = function named() {}
+isEmptyFunction(fixture)
+//=> true
+
+var fixture = function() { return true }
+isEmptyFunction(fixture)
+//=> false
+
+var fixture = function named() { return true }
+isEmptyFunction(fixture)
+//=> false
+
+var fixture = "function codeCov() {__cov_Ejgcx$XN18CSfmeWn$f7vQ.f['2']++;};"
+isEmptyFunction(fixture)
+//=> true
 ```
+
+## Related
+- [cleanup-coverage-code](https://github.com/tunnckoCore/cleanup-coverage-code): Cleanup ugly code added by code coverage tools during the test process. Like this one `__cov_Ejgcx$XN18CSfmeWn$f7vQ.f['2']++;`.
+- [coverage-code-regex](https://github.com/regexps/coverage-code-regex): Regular expression (regex) for matching ugly code that coverage tools add during the test process. Like this one `__cov_Ejgcx$XN18CSfmeWn$f7vQ.f['2']++;`
+- [function-regex](https://github.com/regexps/function-regex): Function regex. Regular expression for matching function parts. Expose match groups for function name, arguments and function body.
+- [hybridify](https://github.com/hybridables/hybridify): Building hybrid APIs. You can use both callback and promise in same time.  Like `asyncFn(name, cb).then().catch()`
+- [parse-function](https://github.com/tunnckoCore/parse-function): Parse a given function or string (fn.toString()) to object with `name`, `params`, `parameters`, `args`, `arguments` and `body` properties.
+
 
 ## Contributing
 
@@ -73,3 +109,5 @@ But before doing anything, please that read the [CONTRIBUTING.md](./CONTRIBUTING
 
 [new-message-url]: https://github.com/tunnckoCore/messages
 [new-message-img]: https://img.shields.io/badge/send%20me-message-green.svg
+
+[parse-function]: https://github.com/tunnckoCore/parse-function
