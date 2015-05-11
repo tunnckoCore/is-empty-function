@@ -7,8 +7,6 @@
 
 'use strict'
 
-'use strict'
-
 var balanced = require('balanced-match')
 var cleanupCoverageCode = require('cleanup-coverage-code')
 
@@ -28,11 +26,11 @@ var cleanupCoverageCode = require('cleanup-coverage-code')
  * isEmptyFunction(fixture)
  * //=> true
  *
- * var fixture = function() { return true; }
+ * var fixture = function() { return true }
  * isEmptyFunction(fixture)
  * //=> false
  *
- * var fixture = function named() { return true; }
+ * var fixture = function named() { return true }
  * isEmptyFunction(fixture)
  * //=> false
  * ```
@@ -40,7 +38,7 @@ var cleanupCoverageCode = require('cleanup-coverage-code')
  * @name isEmptyFunction
  * @param  {Function|String} `[fn]` passed to [parse-function][parse-function]
  * @return {Boolean}
- * @api private
+ * @api public
  */
 module.exports = function isEmptyFunction (fn) {
   if (fn) {
