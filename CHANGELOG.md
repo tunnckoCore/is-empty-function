@@ -1,6 +1,10 @@
 
 
-## 1.0.6 - 2015-05-11
+## 1.0.7 - 2015-05-17
+- Release v1.0.7 / npm@v1.0.7 
+- unnecessary use of boolean literals
+
+## 1.0.6 - 2015-05-17
 - Release v1.0.6 / npm@v1.0.6 
 - jshint `asi` tweak for 4.0 GPA
 - fix contributing section typo

@@ -1,6 +1,6 @@
 {
   "name": "is-empty-function",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Checks the given function (or fn.toString()) is with empty body - dont have body.",
   "scripts": {
     "test": "standard && node test.js"
