@@ -1,7 +1,12 @@
 
 
+## 1.0.6 - 2015-05-11
+- Release v1.0.6 / npm@v1.0.6 
+- jshint `asi` tweak for 4.0 GPA
+- fix contributing section typo
+
 ## 1.0.5 - 2015-05-11
-- Release v1.0.5 / npm@v1.0.5  
+- Release v1.0.5 / npm@v1.0.5
 - cleanup
 - update readme
 - update
