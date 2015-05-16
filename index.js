@@ -45,7 +45,8 @@ module.exports = function isEmptyFunction (fn) {
     var fnString = fn.toString()
     var body = balanced('{', '}', fnString).body
     body = cleanupCoverageCode(body)
-    return body.length > 0 ? false : true
+
+    return !(body.length > 0)
   }
   return false
 }
