@@ -1,11 +1,20 @@
 
 
+## 1.1.0 - 2016-01-29
+- Release v1.1.0 / npm@v1.1.0
+- switch back to `parse-function@2.2`
+  + may have performance boost or hit, please open an issue if something
+  + this adds support for arrow functions
+- update / add new tests
+- update boilerplate, license year, etc stuff
+- greenkeeper enabled
+
 ## 1.0.7 - 2015-05-17
-- Release v1.0.7 / npm@v1.0.7 
+- Release v1.0.7 / npm@v1.0.7
 - unnecessary use of boolean literals
 
 ## 1.0.6 - 2015-05-17
-- Release v1.0.6 / npm@v1.0.6 
+- Release v1.0.6 / npm@v1.0.6
 - jshint `asi` tweak for 4.0 GPA
 - fix contributing section typo
 
