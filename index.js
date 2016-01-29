@@ -1,52 +1,49 @@
 /*!
  * is-empty-function <https://github.com/tunnckoCore/is-empty-function>
  *
- * Copyright (c) 2015 Charlike Mike Reagent, contributors.
+ * Copyright (c) 2015-2016 Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)
  * Released under the MIT license.
  */
 
 'use strict'
 
-var balanced = require('balanced-match')
-var cleanupCoverageCode = require('cleanup-coverage-code')
+var parseFn = require('parse-function')
+var cleanup = require('cleanup-coverage-code')
 
 /**
- * Check given function have empty body or not, and returns true or false.
+ * > Check that given string, function or arrow function
+ * have empty body, using `parse-function`.
  *
- * **Example:**
+ * **Example**
  *
  * ```js
- * var isEmptyFunction = require('is-empty-function')
+ * const isEmptyFunction = require('is-empty-function')
  *
- * var fixture = 'function() {}'
- * isEmptyFunction(fixture)
- * //=> true
+ * const fixture = "function codeCov () {__cov_Ejgcx$XN18CSfmeWn$f7vQ.f['2']++;};"
+ * isEmptyFunction(fixture)            // => true
+ * isEmptyFunction('function () {}')   // => true
+ * isEmptyFunction('z => {}')          // => true
+ * isEmptyFunction('(a, b) => {}')     // => true
+ * isEmptyFunction(z => {})            // => true
+ * isEmptyFunction((a, b) => {})       // => true
  *
- * var fixture = function named() {}
- * isEmptyFunction(fixture)
- * //=> true
- *
- * var fixture = function() { return true }
- * isEmptyFunction(fixture)
- * //=> false
- *
- * var fixture = function named() { return true }
- * isEmptyFunction(fixture)
- * //=> false
+ * // return `false`
+ * isEmptyFunction('function () { return true }')      // => false
+ * isEmptyFunction('z => { return z * z }')            // => false
+ * isEmptyFunction('(a, b) => {}')                     // => false
+ * isEmptyFunction(z => { return z + z })              // => false
+ * isEmptyFunction((a, b) => { return a * b})          // => false
+ * isEmptyFunction((a, b) => a * 2 * z)                // => false
+ * isEmptyFunction(function () { return true })        // => false
+ * isEmptyFunction(function named () { return true })  // => false
  * ```
  *
- * @name isEmptyFunction
- * @param  {Function|String} `[fn]` passed to [parse-function][parse-function]
+ * @name  isEmptyFunction
+ * @param  {Function|ArrowFunction|String} `val` passed to [parse-function][parse-function]
  * @return {Boolean}
  * @api public
  */
-module.exports = function isEmptyFunction (fn) {
-  if (fn) {
-    var fnString = fn.toString()
-    var body = balanced('{', '}', fnString).body
-    body = cleanupCoverageCode(body)
-
-    return !(body.length > 0)
-  }
-  return false
+module.exports = function isEmptyFunction (val) {
+  if (!val || !arguments.length) return false
+  return !(cleanup(parseFn(val).body).length > 0)
 }

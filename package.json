@@ -1,63 +1,39 @@
 {
   "name": "is-empty-function",
   "version": "1.0.7",
-  "description": "Checks the given function (or fn.toString()) is with empty body - dont have body.",
+  "description": "Check that given string, function or arrow function have empty body, using `parse-function`.",
+  "repository": "tunnckoCore/is-empty-function",
+  "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
+  "main": "index.js",
+  "license": "MIT",
   "scripts": {
     "test": "standard && node test.js"
   },
-  "author": {
-    "name": "Charlike Mike Reagent",
-    "email": "mameto_100@mail.bg",
-    "url": "https://github.com/tunnckoCore"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/tunnckoCore/is-empty-function.git"
-  },
-  "keywords": [
-    "args",
-    "argument",
-    "arguments",
-    "body",
-    "check",
-    "checks",
-    "empty",
-    "fn",
-    "fns",
-    "func",
-    "funcs",
-    "function",
-    "functions",
-    "given",
-    "name",
-    "names",
-    "obj",
-    "object",
-    "objects",
-    "parse",
-    "parser",
-    "parsers",
-    "parses",
-    "parsing",
-    "properties",
-    "property",
-    "string",
-    "strings",
-    "tostring",
-    "util",
-    "utils",
-    "validate",
-    "validates"
-  ],
-  "license": {
-    "type": "MIT",
-    "url": "https://github.com/tunnckoCore/is-empty-function/blob/master/LICENSE.md"
-  },
   "dependencies": {
-    "balanced-match": "~0.2.0",
-    "cleanup-coverage-code": "~1.0.3"
+    "cleanup-coverage-code": "^1.0.3",
+    "parse-function": "^2.2.0"
   },
   "devDependencies": {
     "assertit": "^0.1.0"
-  }
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "arrow",
+    "arrowfn",
+    "arrowfunction",
+    "body",
+    "check",
+    "empty",
+    "fn",
+    "func",
+    "function",
+    "is",
+    "is-empty-function",
+    "parse",
+    "string",
+    "validate",
+    "value"
+  ]
 }
