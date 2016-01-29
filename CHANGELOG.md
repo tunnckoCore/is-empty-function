@@ -1,5 +1,10 @@
 
 
+## 1.1.1 - 2016-01-29
+- Release v1.1.1 / npm@v1.1.1
+- use pre-commit, bump parse-function
+- update tests (codeclimate 4.0 now)
+
 ## 1.1.0 - 2016-01-29
 - Release v1.1.0 / npm@v1.1.0
 - switch back to `parse-function@2.2`
