@@ -4,6 +4,7 @@
   "description": "Check that given string, function or arrow function have empty body, using `parse-function`.",
   "repository": "tunnckoCore/is-empty-function",
   "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
+  "precommit.silent": true,
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -11,10 +12,11 @@
   },
   "dependencies": {
     "cleanup-coverage-code": "^1.0.3",
-    "parse-function": "^2.2.0"
+    "parse-function": "^2.2.1"
   },
   "devDependencies": {
-    "assertit": "^0.1.0"
+    "assertit": "^0.1.0",
+    "pre-commit": "^1.1.2"
   },
   "files": [
     "index.js"
