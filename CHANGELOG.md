@@ -1,5 +1,9 @@
 
 
+## 1.1.2 - 2016-02-02
+- Release v1.1.2 / npm@v1.1.2
+- update deps (bump to `parse-function@v2.3.x`)
+
 ## 1.1.1 - 2016-01-29
 - Release v1.1.1 / npm@v1.1.1
 - use pre-commit, bump parse-function

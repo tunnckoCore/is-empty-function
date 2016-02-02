@@ -1,6 +1,6 @@
 {
   "name": "is-empty-function",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Check that given string, function or arrow function have empty body, using `parse-function`.",
   "repository": "tunnckoCore/is-empty-function",
   "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
